@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Censo de Población</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincular el archivo CSS -->
+</head>
+
+<body class="from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex flex-col items-center">
+
+    <div class="container mx-auto p-6">
+        <!-- Título principal -->
+        <h1 class="text-4xl font-extrabold text-center mb-8 drop-shadow-lg">
+            Datos del Censo de Población: El Progreso
+        </h1>
+
+        <!-- Selección del municipio -->
+        <form class="mb-8">
+            <label for="municipios" class="block mb-2 text-lg font-semibold text-center">Selecciona un Municipio:</label>
+            <select name="municipios" id="municipios"
+                class="block w-full max-w-sm mx-auto p-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                onchange="obtenerDatos()">
+                <option value="999">Total departamento</option>
+                <option value="201">Guastatoya</option>
+                <option value="202">Morazán</option>
+                <option value="203">San Agustín Acasaguastlán</option>
+                <option value="204">San Cristóbal Acasaguastlán</option>
+                <option value="205">El Jícaro</option>
+                <option value="206">Sansare</option>
+                <option value="207">Sanarate</option>
+                <option value="208">San Antonio La Paz</option>
+            </select>
+        </form>
+
+        <!-- Título de la tabla -->
+        <h2 id="titulo-tabla" class="text-3xl font-bold text-center mb-4"></h2>
+
+        <!-- Tarjeta de resultados -->
+        <div id="resultados" class="bg-white shadow-lg rounded-lg p-6 text-gray-800 transition-all">
+            <table id="data-table" class="min-w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border">Clave</th>
+                        <th class="py-2 px-4 border">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Gráfica de barras -->
+        <div class="mt-8">
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Textarea para mostrar los porcentajes -->
+        <textarea id="porcentajes" class="mt-4 w-full h-32 border p-2" readonly></textarea>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-4 text-center mt-auto">
+        Creado por Christian Borja UMG 2024
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

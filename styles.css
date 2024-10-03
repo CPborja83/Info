@@ -1,0 +1,34 @@
+body {
+    background-color: #f3f4f6; /* Color de fondo claro */
+    color: #333; /* Color de texto oscuro */
+}
+
+.table {
+    background-color: #ffffff; /* Color de fondo de la tabla */
+}
+
+footer {
+    background-color: #212529; /* Color de fondo del footer */
+    color: #fff; /* Color de texto blanco */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px; /* Centrar el texto verticalmente */
+}
+
+/* Estilo para la tabla */
+#data-table {
+    background-color: #f8fafc; /* Color de fondo de la tabla */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+}
+
+#data-table th {
+    background-color: #6b7280; /* Color de fondo de los encabezados */
+    color: #fff; /* Color de texto de los encabezados */
+}
+
+#data-table td {
+    background-color: #e5e7eb; /* Color de fondo de las celdas */
+}
